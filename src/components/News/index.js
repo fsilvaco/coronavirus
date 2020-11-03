@@ -19,8 +19,6 @@ export default function News() {
 
   return (
     <MainNews>
-      {/*BRASIL: https://newsapi.org/v2/top-headlines?country=br&q=covid&apiKey=2c034725d67a4d18a689f163be352bcf */}
-      {/*MUNDO: https://newsapi.org/v2/top-headlines?q=covid&apiKey=2c034725d67a4d18a689f163be352bcf */}
       <h3>Principais noticias</h3>
       <Grid>
         {news.map((article, index) => (
