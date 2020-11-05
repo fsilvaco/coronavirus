@@ -1,22 +1,15 @@
 import styled from "styled-components";
 
 export const Nav = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: ${({ theme }) => theme.backgroundHeader};
+  max-width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 15px 0;
-`;
-
-export const Logo = styled.div`
-  display: flex;
-  align-items: center;
-
-  img {
-    max-width: 50px;
-  }
-
-  span {
-    margin-left: 10px;
-    font-size: 18px;
-  }
+  justify-content: flex-end;
+  padding: 0 60px;
+  height: 64px;
+  box-shadow: ${({ theme }) => theme.boxShadowHeader};
 `;

@@ -1,15 +1,26 @@
-import React from "react";
-import { Nav, Logo } from "./styles";
+import React, { useContext } from "react";
+import { Nav } from "./styles";
+import Switch from "react-switch";
+import { ThemeContext } from "styled-components";
 
-import logo from "../../assets/microbe.png";
-
-export default function Header() {
+export default function Header({ themeToggler }) {
+  const theme = useContext(ThemeContext);
+  console.log(theme.background);
   return (
     <Nav>
-      <Logo>
-        <img src={logo} alt="Virus" />
-        <span>Covid-19</span>
-      </Logo>
+      <Switch
+        onChange={() => themeToggler()}
+        checked={theme.background === "#181818"}
+        checkedIcon={false}
+        uncheckedIcon={false}
+        height={15}
+        width={30}
+        handleDiameter={20}
+        onColor={"#4e4e4e"}
+        offColor={"#4e4e4e"}
+        onHandleColor={"#3ea6ff"}
+        offHandleColor={"#9e9e9e"}
+      />
     </Nav>
   );
 }

@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body{
     font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
-    background-color: var(--main-bg);
+    background-color: ${({ theme }) => theme.background};
     color: var(--color-gray);
   }
 
