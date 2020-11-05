@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const MainNews = styled.div`
   padding: 16px;
-  border: 1px solid #dadce0;
+  border: ${({ theme }) => theme.borderColor};
   border-radius: 8px;
   margin-bottom: 32px;
-  background: #ffffff;
+  background: ${({ theme }) => theme.backgroundPainel};
 
   h3 {
     font-size: 1rem;
     font-family: "Google Sans", sans-serif;
     font-weight: 400;
-    color: #202124;
+    color: ${({ theme }) => theme.fontColor};
     padding-bottom: 8px;
     margin-bottom: 16px;
   }
@@ -45,7 +45,7 @@ export const Grid = styled.div`
 
     align-items: center;
 
-    border-top: 1px solid #dadce0;
+    border-top: ${({ theme }) => theme.borderColor};
 
     padding-top: 24px;
 
@@ -88,7 +88,7 @@ export const Grid = styled.div`
 export const Link = styled.div`
   width: 100%;
   text-align: center;
-  border-top: 1px solid #dadce0;
+  border-top: ${({ theme }) => theme.borderColor};
   height: 50px;
   padding-top: 10px;
   display: flex;

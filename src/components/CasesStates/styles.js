@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const Cases = styled.div`
   padding: 16px;
-  border: 1px solid #dadce0;
+  border: ${({ theme }) => theme.borderColor};
   border-radius: 8px;
   margin-bottom: 32px;
-  background: #ffffff;
+  background: ${({ theme }) => theme.backgroundPainel};
 
   h3 {
     font-size: 1.375rem;
     font-family: "Google Sans", sans-serif;
     font-weight: 400;
-    color: #202124;
+    color: ${({ theme }) => theme.fontColor};
     padding-bottom: 8px;
     margin-bottom: 16px;
   }
@@ -26,12 +26,11 @@ export const Cases = styled.div`
       border-collapse: collapse;
 
       thead {
-        border-bottom: 1px solid #e8eaed;
+        border-bottom: ${({ theme }) => theme.borderColor};
       }
 
       tr {
         font-weight: 400;
-        background-color: #ffffff;
         color: #70757a;
         font-size: 12px;
 
@@ -39,14 +38,14 @@ export const Cases = styled.div`
         margin-right: 16px;
 
         :not(:last-child) {
-          border-bottom: 1px solid #e8eaed;
+          border-bottom: ${({ theme }) => theme.borderColor};
         }
 
         th {
           padding: 0 8px 12px 0;
           text-align: left;
           font-weight: 400;
-          background-color: #ffffff;
+          background: ${({ theme }) => theme.backgroundHeader};
           color: #70757a;
           font-size: 12px;
           position: sticky;
@@ -59,7 +58,7 @@ export const Cases = styled.div`
           min-width: 175px;
           padding-left: 0;
 
-          color: #202124;
+          color: ${({ theme }) => theme.fontColor};
           font-size: 14px;
           padding: 12px 8px 12px 0;
         }

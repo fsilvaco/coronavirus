@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const Country = styled.div`
   padding: 16px;
-  border: 1px solid #dadce0;
+  border: ${({ theme }) => theme.borderColor};
   border-radius: 8px;
   margin-bottom: 32px;
-  background: #ffffff;
+  background: ${({ theme }) => theme.backgroundPainel};
 
   h3 {
     font-size: 1.375rem;
     font-family: "Google Sans", sans-serif;
     font-weight: 400;
-    color: #202124;
+    color: ${({ theme }) => theme.fontColor};
     padding-bottom: 8px;
     margin-bottom: 16px;
   }
@@ -49,21 +49,21 @@ export const Flex = styled.div`
   position: relative;
 
   :not(:last-child) {
-    border-right: 1px solid #eee;
+    border-right: ${({ theme }) => theme.borderColor};
   }
 
   span {
     word-wrap: break-word;
     word-break: break-word;
     font-family: "Roboto", sans-serif;
-    color: #5f6368;
+    color: ${({ theme }) => theme.fontColorGray};
     font-size: 0.75rem;
     line-height: 1.3;
   }
   h2 {
     font-family: "Google Sans", sans-serif;
     font-weight: 500;
-    color: #202124;
+    color: ${({ theme }) => theme.fontColor};
     margin: 4px 0 8px;
     font-size: 26px;
   }
