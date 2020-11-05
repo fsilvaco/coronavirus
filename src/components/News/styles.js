@@ -40,7 +40,7 @@ export const Grid = styled.div`
 
     box-orient: vertical;
     flex-direction: column;
-    color: #202124;
+    color: ${({ theme }) => theme.fontColor};
     vertical-align: top;
 
     align-items: center;
@@ -74,7 +74,7 @@ export const Grid = styled.div`
 
       a {
         text-decoration: none;
-        color: #202124;
+        color: ${({ theme }) => theme.fontColor};
         font-weight: 500;
 
         :hover {
