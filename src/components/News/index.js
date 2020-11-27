@@ -7,7 +7,7 @@ export default function News() {
   useEffect(() => {
     async function fecthData() {
       const response = await fetch(
-        "https://newsapi.org/v2/top-headlines?country=br&q=covid&apiKey=2c034725d67a4d18a689f163be352bcf"
+        "https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=br&q=covid&apiKey=2c034725d67a4d18a689f163be352bcf"
       );
       const data = await response.json();
 
