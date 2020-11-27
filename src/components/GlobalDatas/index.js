@@ -7,7 +7,7 @@ export default function GlobalDatas() {
   useEffect(() => {
     async function fecthData() {
       const response = await fetch(
-        `https://covid19-brazil-api.now.sh/api/report/v1/brazil`
+        `https://cors-anywhere.herokuapp.com/https://covid19-brazil-api.now.sh/api/report/v1/brazil`
       );
       const data = await response.json();
 
